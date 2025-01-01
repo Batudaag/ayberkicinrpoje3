@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araba Kiralama</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: black;
+        }
+
+        .navbar-toggler {
+            background-color: #17a2b8 !important;
+        }
+
+        .navstyle {
+            background-color: black;
+            color: #fff !important;
+        }
+
+        nav a {
+            color: #fff;
+        }
+
+        .main {
+            background-image: url('resimler/araba.gif');
+            background-size: 100% 100%;
+            background-position: center;
+            height: 75vh;
+        }
+
+        footer {
+            background-color: black;
+            text-transform: capitalize;
+            color: white;
+        }
+
+        footer strong {
+            margin-bottom: 1.5rem !important;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+
+        #kiralamaForm {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-expand-lg navstyle">
+        <div class="container">
+            <a class="navbar-brand " href="#"><i class="fas fa-car fa-lg"></i><span class="font-weight-bold">&nbsp;Car Rental</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon text-info"><i class="fas fa-bars"
+                                                               style="color:#fff; font-size:28px;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Ev</a>
+                    </li>
+
+                    <a class="nav-link" href="#carsSection" data-target="#carsSection">Arabalar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wa.me/+905510103199">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<header class="container-fluid main pl-lg-5 d-flex align-items-center text-danger text-capitalize">
+    <div class="pl-lg-5">
+        <h1 class="ml-5 text-info font-weight-bold">Konfor ve Hızın Keyfini Çıkarın</h1>
+        <p class="ml-5 text-white">Uygun fiyatlarla size yakışan arabalar</p>
+    </div>
+</header>
+<section id="carsSection" class="container mt-5">
+    <h2 class="text-center mb-4 text-info">Arabalarımız</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="resimler/sedan.jpeg" class="card-img-top" alt="Sedan">
+                <div class="card-body">
+                    <h5 class="card-title">Sedan</h5>
+                    <p class="card-text">
+                        <strong>Renk:</strong> Siyah<br>
+                        <strong>Yıl:</strong> 2023<br>
+                        <strong>Günlük Ücret:</strong> 400 ₺<br>
+                        <strong>Açıklama:</strong> Şehir içi ve uzun yol konforu için ideal sedan araç.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="resimler/SUV.jpeg" class="card-img-top" alt="Suv">
+                <div class="card-body">
+                    <h5 class="card-title">SUV</h5>
+                    <p class="card-text">
+                        <strong>Renk:</strong> Beyaz<br>
+                        <strong>Yıl:</strong> 2022<br>
+                        <strong>Günlük Ücret:</strong> 500 ₺<br>
+                        <strong>Açıklama:</strong> Aileler ve doğa gezileri için mükemmel bir SUV.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="resimler/spor.jpeg" class="card-img-top" alt="Spor">
+                <div class="card-body">
+                    <h5 class="card-title">Spor</h5>
+                    <p class="card-text">
+                        <strong>Renk:</strong> Kırmızı<br>
+                        <strong>Yıl:</strong> 2023<br>
+                        <strong>Günlük Ücret:</strong> 700 ₺<br>
+                        <strong>Açıklama:</strong> Hız ve tasarımı bir arada isteyenler için spor araç.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="resimler/Hatchback.jpeg" class="card-img-top" alt="Hatchback">
+                <div class="card-body">
+                    <h5 class="card-title">Hatchback</h5>
+                    <p class="card-text">
+                        <strong>Renk:</strong> Gri<br>
+                        <strong>Yıl:</strong> 2021<br>
+                        <strong>Günlük Ücret:</strong> 350 ₺<br>
+                        <strong>Açıklama:</strong> Şehir içi kullanım için kompakt ve ekonomik araç.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="resimler/Cabrio.jpeg" class="card-img-top" alt="Cabrio">
+                <div class="card-body">
+                    <h5 class="card-title">Cabrio</h5>
+                    <p class="card-text">
+                        <strong>Renk:</strong> Mavi<br>
+                        <strong>Yıl:</strong> 2020<br>
+                        <strong>Günlük Ücret:</strong> 600 ₺<br>
+                        <strong>Açıklama:</strong> Açık hava keyfi için tasarlanmış üstü açılır araç.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="resimler/Elektrik.jpeg" class="card-img-top" alt="Elektrik">
+                <div class="card-body">
+                    <h5 class="card-title">Elektrik</h5>
+                    <p class="card-text">
+                        <strong>Renk:</strong> Beyaz<br>
+                        <strong>Yıl:</strong> 2023<br>
+                        <strong>Günlük Ücret:</strong> 450 ₺<br>
+                        <strong>Açıklama:</strong> Çevre dostu ve ekonomik elektrikli araç.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row p-3 text-center">
+            <div class="col-md-4 col-sm-12">
+                <strong class="text-info"><i class="fas fa-location"></i> Konumumuz</strong>
+                <p>Camii, Cami, 15300 Bucak/Burdur</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <strong class="text-info">Telefon</strong>
+                <p>0544 118 1302</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <strong class="text-info">Email</strong>
+                <p>bdag1666@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="kiralamaForm" style="max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <button id="closeBtn" style="float: right; background-color: #fff; border: none; cursor: pointer; font-size: 16px;">&times;</button>
+    <h2 style="text-align: center; color: #333;">Kiralama Formu</h2>
+    <p style="font-weight: bold;">Araç Adı: <span id="arabaAdi"></span></p>
+    <label for="kiralamaTarihi" style="display: block; margin-bottom: 8px; font-size: 14px;">Kiralama Tarihi:</label>
+    <input type="date" id="kiralamaTarihi" required style="width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px;">
+    <label for="iadeTarihi" style="display: block; margin-bottom: 8px; font-size: 14px;">İade Tarihi:</label>
+    <input type="date" id="iadeTarihi" required style="width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px;">
+    <label for="kacKm" style="display: block; margin-bottom: 8px; font-size: 14px;">Kaç Kilometre Kiralanacak:</label>
+    <input type="number" id="kacKm" required style="width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px;">
+    <button type="submit" id="submitBtn" style="background-color: #4CAF50; color: #fff; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Kiralama Fiyat Bilgisi Al</button>
+    <p id="fiyat" style="font-size: 16px; margin-top: 16px;">Toplam Kiralama Fiyatı: ₺</p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var carImages = document.querySelectorAll(".card-img-top");
+        var kiralamaForm = document.getElementById("kiralamaForm");
+        var submitButton = document.getElementById("submitBtn");
+        var closeButton = document.getElementById("closeBtn");
+        var selectedCar;
+
+        carImages.forEach(function (img) {
+            img.addEventListener("click", function () {
+                kiralamaForm.style.display = "block";
+                document.getElementById("arabaAdi").innerText = img.alt;
+                selectedCar = img.alt;
+            });
+        });
+
+        submitButton.addEventListener("click", function () {
+            var dailyPrice;
+            switch (selectedCar) {
+                case "Sedan":
+                    dailyPrice = 400;
+                    break;
+                case "SUV":
+                    dailyPrice = 500;
+                    break;
+                case "Spor":
+                    dailyPrice = 700;
+                    break;
+                case "Hatchback":
+                    dailyPrice = 350;
+                    break;
+                case "Cabrio":
+                    dailyPrice = 600;
+                    break;
+                case "Elektrik":
+                    dailyPrice = 450;
+                    break;
+                default:
+                    dailyPrice = 0;
+                    break;
+            }
+
+            var kiralamaTarihi = new Date(document.getElementById("kiralamaTarihi").value);
+            var iadeTarihi = new Date(document.getElementById("iadeTarihi").value);
+            var kacKm = document.getElementById("kacKm").value;
+
+            var gunFarki = Math.ceil((iadeTarihi - kiralamaTarihi) / (1000 * 60 * 60 * 24));
+            var kiralamaFiyati = dailyPrice * gunFarki * kacKm / 100;
+
+            document.getElementById("fiyat").innerText = "Toplam Kiralama Fiyatı: " + kiralamaFiyati.toFixed(2) + "₺\nKiralamak için lütfen iletişime geçiniz";
+        });
+
+        closeButton.addEventListener("click", function () {
+            kiralamaForm.style.display = "none";
+        });
+    });
+</script>
+</body>
+</html>
